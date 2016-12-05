@@ -1,27 +1,24 @@
-//service functions
-
+// service functions
 function isNumber(value) {
 	return typeof(value) === "number";
 }
+// end service functions
 
-// funstion sum
-
+// function sum
 function sum() {
-	var i = 0, result = 0;
+	var i, result = 0;
 	for (i = 0; i < arguments.length; i++) {
-		if (typeof(arguments[i]) !== "number") {
-			continue;
+		if (isNumber(arguments[i])) {
+			result += arguments[i];
 		}
-		result += arguments[i];
 	}
 	return result;
 }
-
+// end function sum
 
 // function min
-
 function min(arr) {
-	var result;
+	var i, result;
 
 	if (!arguments.length) {
 		return;
@@ -38,11 +35,11 @@ function min(arr) {
 
 	return result;
 }
+// end function min
 
-// funstion max
-
+// function max
 function max(arr) {
-	var result;
+	var i, result;
 
 	if (!arguments.length) {
 		return;
@@ -59,26 +56,4 @@ function max(arr) {
 
 	return result;
 }
-
-// function max(arr) {
-// 	if (!arguments.length) {
-// 		return;
-// 	}
-// 	var i = 0, max, result;
-// 	for (i = 0; i < arr.length; i++) {
-// 		if (!typeof(arr[i])) {
-// 			continue;
-// 		}
-// 		max = arr[i];
-// 	}
-// 	for (i = 0; i < arr.length; i++) {
-// 		if (!typeof(arr[i])) {
-// 			continue;
-// 		}
-// 		if (arr[i] > max)	{
-// 			max = arr[i];
-// 		}
-// 	}
-// 	result = max;
-// 	return result;
-// }
+// end function max
